@@ -10,6 +10,8 @@ from geopy.distance import geodesic
 import plotly.express as px
 from login_register import login_register_page
 
+
+st.set_page_config(page_title="Blood Donation Dashboard", layout="wide")
 # ----------------------
 # SESSION STATE INIT
 # ----------------------
@@ -37,7 +39,7 @@ if st.sidebar.button("🚪 Log Out"):
 # ----------------------
 # APP CONFIGURATION AFTER LOGIN
 # ----------------------
-st.set_page_config(page_title="Blood Donation Dashboard", layout="wide")
+#st.set_page_config(page_title="Blood Donation Dashboard", layout="wide")
 st.sidebar.title("🩸 Blood Donation Dashboard")
 
 # Sidebar menu
@@ -658,5 +660,6 @@ elif menu == "📊 Donation Statistics":
         )
         fig_pie.update_layout(title_x=0.5)
         st.plotly_chart(fig_pie, use_container_width=True)
+
 
     st.markdown("---")
